@@ -105,7 +105,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1AapPkLcdYlDekOjGDoK5Ma-8Tnv41Bst04exT3uQ57w/gviz/tq?tqx=out:csv&sheet=Data',
+        url: 'https://docs.google.com/spreadsheets/d/1JMcyriFEYQEX4DZnLYZvhx_7mGXYKqUV6r1IpS62d7Y/gviz/tq?tqx=out:csv&sheet=Data',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -143,7 +143,7 @@
               //set popup text
               //You can adjust the values of the popup to match the headers of your CSV.
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
-              var description = `<h3>` + e.features[0].properties.Name + `</h3>` + `<h4>` + `<b>` + `CityName: ` + `</b>` + e.features[0].properties.CityName + `</h4>` + `<h4>` + `<b>` + `Population: ` + `</b>` + e.features[0].properties.Population + `</h4>`;
+              var description = `<h3>` + e.features[0].properties.Name + `</h3>` + `<h4>` + `<b>` + `Standort: ` + `</b>` + e.features[0].properties.Standort + `</h4>` + `<h4>` + `<b>` + `Spitzenmiete: ` + `</b>` + e.features[0].properties.Spitzenmiete + `</h4>`;
 
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
@@ -178,6 +178,7 @@
         });
       };
     });
+
 
 
 
