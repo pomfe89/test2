@@ -23,6 +23,7 @@
       width: 100%;
     }
 
+
     /* Popup styling */
 
     .mapboxgl-popup {
@@ -95,7 +96,7 @@
     mapboxgl.accessToken = 'pk.eyJ1IjoiZGpoaW56IiwiYSI6ImNrcDN4bHN2bzFpaDcydmxnbTJwZmJycHcifQ.aSinSUBsdwabSTctr32CWw'; //Mapbox token 
     var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/mapbox/streets-v11', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+      style: 'mapbox://styles/djhinz/clgytsfq200fj01qu8ff4exkk', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
       center: [-122.411, 37.785], // starting position [lng, lat]
       zoom: 10,// starting zoom
       transformRequest: transformRequest
@@ -134,6 +135,7 @@
               }
             });
 
+            
 
             // When a click event occurs on a feature in the csvData layer, open a popup at the
             // location of the feature, with description HTML from its properties.
@@ -143,7 +145,7 @@
               //set popup text
               //You can adjust the values of the popup to match the headers of your CSV.
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
-              var description = `<h3>` + e.features[0].properties.Name + `</h3>` + `<h4>` + `<b>` + `Standort: ` + `</b>` + e.features[0].properties.Standort + `</h4>` + `<h4>` + `<b>` + `Spitzenmiete: ` + `</b>` + e.features[0].properties.Spitzenmiete + `</h4>`;
+              var description = `<h3>` + e.features[0].properties.Standort + `</h3>` + `<h4>` + `<b>` + `Spitzenmiete: ` + `</b>` + e.features[0].properties.Spitzenmiete + `</h4>`;
 
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
