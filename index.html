@@ -124,15 +124,15 @@
             //Add the the layer to the map
             map.addLayer({
               'id': 'csvData',
-              'type': 'symbol',
+              'type': 'circle',
               'source': {
                 'type': 'geojson',
                 'data': data
               },
-              'layout': {
-              'icon-image': 'diamond', // reference the image
-              'icon-size': 0.5
-            }
+              'paint': {
+                'circle-radius': 10,
+                'circle-color': "purple"
+              }
             });
 
             
